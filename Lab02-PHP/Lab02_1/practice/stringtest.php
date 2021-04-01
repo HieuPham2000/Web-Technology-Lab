@@ -8,6 +8,12 @@
       color: orangered;
       text-align: center;
     }
+
+    hr {
+      width: 1000px;
+      margin: 0;
+      padding: 0;
+    }
   </style>
 </head>
 
@@ -255,6 +261,97 @@
     Test1();
   ?>
   <hr>
+
+  <h3>Including Files</h3>
+  <?php
+    echo "A $color $fruit"; // A
+    include 'vars.php';
+    echo "A $color $fruit"; // A green apple
+  ?>
+  <hr>
+  <?php
+    function foo()
+    {
+      global $color;
+      include ('vars.php');
+      echo "A $color $fruit";
+    }
+    /* vars.php is in the scope of foo() so *
+    * $fruit is NOT available outside of this *
+    * scope. $color is because we declared it *
+    * as global. */
+    foo(); // A green apple
+    echo "A $color $fruit"; // A green
+  ?>
+  <hr>
+
+  <h3>PHP Information</h3>
+  <!-- <?php
+  phpinfo();
+  ?> -->
+  <?php
+  phpinfo(INFO_GENERAL);
+  ?>
+  <hr>
+
+  <h3>Server Variables</h3>
+  <?php
+    echo "Referer: " . $_SERVER["HTTP_REFERER"] . "<br />";
+    echo "Browser: " . $_SERVER["HTTP_USER_AGENT"] . "<br />";
+    echo "User's IP address: " . $_SERVER["REMOTE_ADDR"];
+  ?>
+  <?php
+    echo "<br/><br/><br/>";
+    echo "<h2>All information</h2>";
+    foreach ($_SERVER as $key => $value)
+    {
+      echo $key . " = " . $value . "<br/>";
+    }
+  ?>
+  <hr>
+
+  <h3>File Open</h3>
+  <?php
+    // $fh=fopen("welcome.txt","r");
+  ?>
+  <?php
+    // if( !($fh=fopen("welcome.txt","r")) )
+    //   exit("Unable to open file!");
+  ?> 
+  <hr>
+
+  <h3>File Workings</h3>
+  <?php
+    // $myFile = "welcome.txt";
+    // if (!($fh=fopen($myFile,'r')))
+    // exit("Unable to open file.");
+    // while (!feof($fh))
+    // {
+    // $x=fgetc($fh);
+    // echo $x;
+    // }
+    // fclose($fh);
+  ?>
+  <hr>
+
+  <h3>Getting Time and Date</h3>
+  <?php
+  //Prints something like: Monday
+  echo date("l");
+  //Like: Monday 15th of January 2003 05:51:38 AM
+  echo date("l jS \of F Y h:i:s A");
+  //Like: Monday the 15th
+  echo date("l \\t\h\e jS");
+  ?>
+  <hr>
+  <?php
+  $nextWeek = time() + (7 * 24 * 60 * 60);
+  // 7 days; 24 hours; 60 mins; 60secs
+  echo 'Now: '. date('Y-m-d') ."\n";
+  echo 'Next Week: '. date('Y-m-d', $nextWeek) ."\n";
+  ?>
+  <hr>
+
 </body>
 
 </html>

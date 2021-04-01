@@ -1,26 +1,49 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Exercise</title>
-  </head>
-  <body>
-    <h1>Form</h1>
-    <form action="exercise.php"  method="POST"> 
-      <label>
-        Name:
-        <input type="text" name="name" placeholder="Enter your name" required>
-      </label>
-      <br>
-      <label>
-        Age:
-        <input type="number" name="age" placeholder="Enter your age" min="5" max="100" required>
-      </label>
-      <br>
-      <label>
-        Email:
-        <input type="email" name="email" placeholder="Enter your email" required>
-      </label>
-      <input type="submit" value="Submit">
-    </form>
-  </body>
+    <head> <title> Exercise </title> </head>
+    <body>
+        <form action="exercise.php" method="POST">
+            <br></br>
+            Full name: <input type="text" size="16" maxlength="50" name="fullname">
+            <br></br>
+            Date of birth: <input type="text" size="16" maxlength="12" name="dateofbirth">
+            <br></br>
+            Gender: <input type="text" size="16" maxlength="5" name="gender">
+            <br></br>
+            Mobile phone number: <input type="text" size="16" maxlength="12" name="mobilephonenumber">
+            <br></br>
+            Email address: <input type="text" size="16" maxlength="50" name="emailaddress">
+            <br></br>
+            Education process: <input type="text" size="16" maxlength="50" name="educationprocess">
+            <br></br>
+            Class: <input type="text" size="16" maxlength="20" name="class">
+            <br></br>
+            Village: <input type="text" size="16" maxlength="50" name="village">
+            <br></br>
+            Living: <input type="text" size="16" maxlength="50" name="living">
+            <br></br>
+            Hobby:
+            <br></br>
+            + some common hobbies:<br>
+            <input type="checkbox" id="hobby1" name="hobby1" value="Playing game, ">
+            <label for="hobby1"> Playing game</label><br>
+            <input type="checkbox" id="hobby2" name="hobby2" value="Playing sport, ">
+            <label for="hobby2"> Playing sport</label><br>
+            <input type="checkbox" id="hobby3" name="hobby3" value="Listening to music, ">
+            <label for="hobby3"> Listening to music</label><br>
+            <input type="checkbox" id="hobby4" name="hobby4" value="Watching movie, ">
+            <label for="hobby4"> Watching movie</label><br>
+            <input type="checkbox" id="hobby5" name="hobby5" value="Shopping, ">
+            <label for="hobby5"> Shopping</label><br>
+            <input type="checkbox" id="hobby6" name="hobby6" value="Reading book, ">
+            <label for="hobby6"> Reading book</label><br>
+            <input type="checkbox" id="hobby7" name="hobby7" value="Traveling, ">
+            <label for="hobby7"> Traveling</label>
+            <br></br>
+            + others hobbies:
+            <input type="text" size="16" maxlength="50" name="hobby">
+            <br></br>
+            <input type="SUBMIT" value="Click To Submit">
+            <input type="RESET" value="Erase and Restart">
+        </form>
+    </body>
 </html>
