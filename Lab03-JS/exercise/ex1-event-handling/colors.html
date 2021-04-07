@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Handling</title>
+    <style>
+      #div-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      a {
+        margin: 10px 30px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-label">
+      <a href="#" style="color: red;" onmouseover="changeColor('red')" onmouseout="changeColor('black')">RED</a>
+      <a href="#" style="color: green;" onmouseover="changeColor('green')" onmouseout="changeColor('black')">GREEN</a>
+      <a href="#" style="color: blue;" onmouseover="changeColor('blue')" onmouseout="changeColor('black')">BLUE</a>
+    </div>
+    <p id="paragraph">Write a simple HTML document called colors.html containing three colored links at the top of the page labeled RED, GREEN, and BLUE. Under the links there should be a small paragraph of text (you make this up) with a starting color of BLACK. Using onMouseOver and onMouseOut events of the links, when a user rolls over the each and any of the color labeled links, the color of the text in the paragraph below should change to the color corresponding to the link the user is hovering over. When the user rolls off the link, the color of the text should go back to it's starting color of BLACK.</p>
+    <script>
+      function changeColor(color) {
+        document.getElementById("paragraph").style.color = color
+      }
+    </script>
+  </body>
+</html>

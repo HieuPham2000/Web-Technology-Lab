@@ -1,0 +1,49 @@
+<html>
+    <head> <title> A Simple Form </title> </head>
+    <body>
+        <form action="validateInputs.php" method="POST">
+            <br></br>
+            Full name: <input type="text" size="16" minLength="8" maxlength="50" name="fullname" required>
+            <br></br>
+            Date of birth: <input type="date" size="16" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" name="dateofbirth">
+            <br></br>
+            Gender: <input type="text" size="16" maxlength="5" name="gender">
+            <br></br>
+            Mobile phone number: <input type="text" pattern="((09|03|07|08|05)+([0-9]{8}))" name="mobilephonenumber" required>
+            <br></br>
+            Email address: <input type="email" size="16" maxlength="50" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" name="emailaddress" required>
+            <br></br>
+            Education process: <input type="text" size="16" maxlength="50" name="educationprocess">
+            <br></br>
+            Class: <input type="text" size="16" maxlength="20" name="class">
+            <br></br>
+            Village: <input type="text" size="16" maxlength="50" name="village">
+            <br></br>
+            Living: <input type="text" size="16" maxlength="50" name="living">
+            <br></br>
+            Hobby:
+            <br></br>
+            + some common hobbies:<br>
+            <input type="checkbox" id="hobby1" name="hobby1" value="Playing game, ">
+            <label for="hobby1"> Playing game</label><br>
+            <input type="checkbox" id="hobby2" name="hobby2" value="Playing sport, ">
+            <label for="hobby2"> Playing sport</label><br>
+            <input type="checkbox" id="hobby3" name="hobby3" value="Listening to music, ">
+            <label for="hobby3"> Listening to music</label><br>
+            <input type="checkbox" id="hobby4" name="hobby4" value="Watching movie, ">
+            <label for="hobby4"> Watching movie</label><br>
+            <input type="checkbox" id="hobby5" name="hobby5" value="Shopping, ">
+            <label for="hobby5"> Shopping</label><br>
+            <input type="checkbox" id="hobby6" name="hobby6" value="Reading book, ">
+            <label for="hobby6"> Reading book</label><br>
+            <input type="checkbox" id="hobby7" name="hobby7" value="Traveling, ">
+            <label for="hobby7"> Traveling</label>
+            <br></br>
+            + others hobbies:
+            <input type="text" size="16" maxlength="50" name="hobby">
+            <br></br>
+            <input type="SUBMIT" value="Click To Submit">
+            <input type="RESET" value="Erase and Restart">
+        </form>
+    </body>
+</html>

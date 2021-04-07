@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Biểu mẫu đăng ký</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Đăng ký xét duyệt học bổng</h1>
+    <p id="description">Học bổng ABC năm học 2021 - 2022, dành cho sinh viên các khóa thuộc khối ngành Công nghệ thông
+      tin, Toán tin, Điện, Tự động hóa trường Đại học Bách khoa Hà Nội</p>
+  </header>
+  <main>
+    <form id="register-form">
+      <section class="form-group">
+        <label for="name">Họ và tên <span>(Ví dụ: Nguyễn Văn An)</span></label>
+        <input type="text" name="full-name" id="full-name" placeholder="Nhập họ và tên đầy đủ">
+      </section>
+      <section class="form-group">
+        <label for="student-code">Mã số sinh viên <span>(Ví dụ: 20183535)</span></label>
+        <input type="text" name="student-code" id="student-code" placeholder="Nhập mã số sinh viên">
+      </section>
+      <section class="form-group">
+        <label for="academic-year">Khóa <span>(Ví dụ: 63)</span></label>
+        <input type="text" name="academic-year" id="academic-year" placeholder="Nhập khóa">
+      </section>
+      <section class="form-group">
+        <label for="school">Viện đào tạo</label>
+        <select id="school">
+          <option disabled selected value="">Chọn viện đào tạo</option>
+          <option value="SOICT">Viện Công nghệ thông tin và Truyền thông</option>
+          <option value="SAMI">Viện Toán ứng dụng và Tin học</option>
+          <option value="SEE">Viện Điện</option>
+        </select>
+      </section>
+      <section class="form-group">
+        <label for="class">Lớp <span>(Ví dụ: Khoa học máy tính 01 - K63)</span></label>
+        <input type="text" name="class" id="class" placeholder="Nhập tên lớp">
+      </section>
+      <section class="form-group">
+        <label for="tel">Số điện thoại <span>Ví dụ: 0123456789</span></label>
+        <input type="text" name="tel" id="tel" placeholder="Nhập số điện thoại">
+      </section>
+      <section class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Nhập địa chỉ email">
+      </section>
+      <section class="form-group">
+        <label for="cpa">CPA <span>(tính đến hết kỳ 20201)</span></label>
+        <input type="text" name="cpa" id="cpa" placeholder="Nhập điểm CPA">
+      </section>
+      <section class="form-group">
+        <label for="drl">Điểm rèn luyện <span>(kỳ 20201)</span></label>
+        <input type="text" name="drl" id="drl" placeholder="Nhập điểm rèn luyện">
+      </section>
+      <section class="form-group">
+        <label for="family">Hoàn cảnh gia đình</label>
+        <label class=""><input type="radio" name="family" value="normal" checked>Bình thường</label>
+        <label><input type="radio" name="family" value="quite-poor">Cận nghèo</label>
+        <label><input type="radio" name="family" value="poor">Khó khăn</label>
+      </section>
+      <section class="form-group">
+        <label for="more">Đăng ký nhận thêm thông tin</label>
+        <label><input type="checkbox" name="more" value="scholarship" checked>Nhận thông tin về học bổng</label>
+        <label><input type="checkbox" name="more" value="internship" checked>Nhận thông tin về cơ hội thực tập</label>
+      </section>
+      <!-- <button type="submit" id="submit">Gửi biểu mẫu</button>  -->
+      <button type="button" id="submit">Gửi biểu mẫu</button> 
+    </form>
+  </main>
+  <!-- <script>
+    function validateName() {
+      var x = document.getElementById("full-name").value;
+      if(x == "") {
+        alert("Họ và tên không được để trống!");
+        return false;
+      }
+    }
+    document.getElementById("submit").addEventListener("click", validateName);
+  </script> -->
+</body>
+
+</html>
