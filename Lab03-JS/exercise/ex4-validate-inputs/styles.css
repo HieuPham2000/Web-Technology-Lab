@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+* {
+  box-sizing: inherit;
+  font-size: 2rem;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(rgba(240, 255, 255, 0.6), rgba(57, 206, 206, 0.6)), url("hust.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  width: 60%;
+  margin: 50px auto;
+}
+#title {
+  font-size: 4rem;
+  color: rgb(109, 5, 109);
+  text-transform: uppercase;
+}
+
+#description {
+  font-style: italic;
+  color: rgb(109, 5, 109);
+}
+
+@media (max-width: 600px) {
+  header {
+    width: 85%;
+    margin: 30px auto;
+  }
+  #title {
+    font-size: 2.5rem;
+  }
+  #description {
+    font-size: 1.5rem;
+  }
+}
+
+#register-form {
+  background: linear-gradient(35deg, rgba(155, 40, 155, 0.6), rgba(73, 2, 73, 0.6));
+  color: white;
+  width: 60%;
+  padding: 30px 50px 50px 50px;
+  margin: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  #register-form {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
+.form-group {
+  text-align: left;
+  margin: 30px 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], option, select {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: black 1px solid;
+}
+
+[type="radio"], [type="checkbox"] {
+  /* vertical-align: middle; */
+  margin: 0;
+  margin-right: 10px;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+input:focus, select:focus {
+  outline: 1;
+  outline-color: aqua;
+  box-shadow: none;
+  border: rgb(148, 192, 243) 2px solid;
+}
+
+span {
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin-left: 10px;
+}
+
+button {
+  width: 100%;
+  background-color: green;
+  padding: 10px;
+  color: white;
+  border: #036d03 0.5px solid;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-out;
+}
+
+button:hover {
+  background-color: #036d03;
+}
