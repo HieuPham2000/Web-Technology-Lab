@@ -6,4 +6,9 @@
 
 </div>
 <?php endforeach?>
+<h2>Or view all products</h2>
+<div class="category">
+    <?php echo $html->link('Products list','products/page')?>
+</div>
+
 </div>
