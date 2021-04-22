@@ -20,7 +20,7 @@ class HTML {
 	}
 
 	function sanitize($data) {
-		return mysql_real_escape_string($data);
+		return mysqli_real_escape_string($this->_dbHandle, $data);
 	}
 
 	function link($text,$path,$prompt = null,$confirmMessage = "Are you sure?") {
@@ -39,7 +39,7 @@ class HTML {
 	}
 
 	function includeCss($fileName) {
-		$data = '<style href="'.BASE_PATH.'/css/'.$fileName.'.css"></script>';
+		$data = '<style href="'.BASE_PATH.'/css/'.$fileName.'.css"></style>';
 		return $data;
 	}
 }
