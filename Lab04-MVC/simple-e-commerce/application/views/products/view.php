@@ -1,16 +1,18 @@
-<div><h2><strong><?php echo $product['Product']['name']?></strong>
+<div><h2 class="name"><strong><?php echo $product['Product']['name']?></strong>
 </div>
 
-<div><h2>Price: $<?php echo $product['Product']['price']?></h2>
+<div>
+    <h2>Price: <span class="price">$<?php echo $product['Product']['price']?></span></h2>
+</div>
 
 
 <?php if (!empty($product['Tag'])):?>
-<h2>Tags:</h2>
+<h2>Tags:
 
 <?php foreach ($product['Tag'] as $tags):?>
-<div class="tag">
+<span class="tag">
 <?php echo $tags['Tag']['name']?>
-</div>
+</span>
 <?php endforeach?>
-</div>
+</h2>
 <?php endif?>

@@ -1,7 +1,7 @@
 <!--<div><h2><strong><?php if(isset($category['Category']['name'])) {echo $category['Category']['name'];}?></strong>
 </div>-->
-<?php error_reporting(0); ?>
-<div><h2><strong><?php echo $category['Category']['name']?></strong>
+<!--<?php error_reporting(0); ?>-->
+<div><h2 class="name"><strong><?php echo $category['Category']['name']?></strong>
 </div>
 
 <?php if (!empty($subcategories)): ?>
