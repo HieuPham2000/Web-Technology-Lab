@@ -56,6 +56,11 @@ function performAction($controller,$action,$queryString = null,$render = 0) {
 	return call_user_func_array(array($dispatch,$action),$queryString);
 }
 
+function redirectAction($controller,$action,$queryString = null,$render = 0) {
+	
+	
+}
+
 /** Routing **/
 
 function routeURL($url) {

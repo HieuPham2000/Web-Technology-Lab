@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/xampp/htdocs/simple-e-commerce/library/sqlquery.class.php</file>
+            <file>file:/D:/xampp/htdocs/simple-e-commerce/application/views/categories/viewall.php</file>
             <file>file:/D:/xampp/htdocs/simple-e-commerce/application/controllers/productscontroller.php</file>
+            <file>file:/D:/xampp/htdocs/simple-e-commerce/db/framework-20090330111635.sql</file>
+            <file>file:/D:/xampp/htdocs/simple-e-commerce/application/controllers/categoriescontroller.php</file>
+            <file>file:/D:/xampp/htdocs/simple-e-commerce/application/models/category.php</file>
+            <file>file:/D:/xampp/htdocs/simple-e-commerce/application/views/header.php</file>
+            <file>file:/D:/xampp/htdocs/simple-e-commerce/application/views/products/view.php</file>
         </group>
     </open-files>
 </project-private>

@@ -26,6 +26,8 @@
             :focus {
                 outline: 0;
             }
+            
+                   
             body {
                 line-height: 1;
                 color: black;
@@ -61,7 +63,7 @@
 
 
             h1 {
-                color:#000000;
+                color:#ff5050;
                 font-family: Cambria, serif;
                 font-size: 34px;
                 font-style: normal;
@@ -185,6 +187,20 @@
             .link-page-number > a:hover {
                 background-color: #ff6666;
                 transform: scale(1.2);
+            }
+            
+            .inform {
+                text-align: center;
+            }
+            .inform > a {
+                color: #ff5050;
+                text-decoration: none;
+                font-size: 18px;
+                transition: 0.2s ease-out;
+            }
+            
+            .inform > a:hover {
+                font-weight: bold;
             }
         </style>
     </head>
