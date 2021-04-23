@@ -347,7 +347,7 @@ class SQLQuery
     if (isset($this->id)) {
       $updates = '';
       foreach ($this->_describe as $field) {
-        if ($this->$field) {
+        if (isset($this->$field)) {
           $updates .= '`' . $field . '` = \'' . mysqli_real_escape_string($this->_dbHandle, $this->$field) . '\',';
         }
       }
@@ -359,16 +359,18 @@ class SQLQuery
       $fields = '';
       $values = '';
       foreach ($this->_describe as $field) {
-        if ($this->$field) {
-          $fields .= '`' . $field . '`,';
+        if (isset($this->$field)) {
+          $fields .= '' . $field . ',';
           $values .= '\'' . mysqli_real_escape_string($this->_dbHandle, $this->$field) . '\',';
         }
       }
+      
       $values = substr($values, 0, -1);
       $fields = substr($fields, 0, -1);
-
+      
       $query = 'INSERT INTO ' . $this->_table . ' (' . $fields . ') VALUES (' . $values . ')';
     }
+    
     $this->_result = mysqli_query($this->_dbHandle, $query);
     $this->clear();
     if ($this->_result == 0) {
