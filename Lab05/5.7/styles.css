@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 29, 2021, 2:11:36 PM
+    Author     : Hieu Pham
+*/
+body {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+h1 {
+    text-align: center;
+    color: dodgerblue;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 1px solid black;
+}
+
+td, th {
+    padding: 5px 10px;
+}
+
+.link-category {
+    padding: 0;
+}
+a {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #6600cc;
+    transition: 0.2s ease-out;
+    
+}
+
+a:hover {
+    background-color: #ccffff;
+}
+

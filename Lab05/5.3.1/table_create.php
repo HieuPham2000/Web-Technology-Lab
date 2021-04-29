@@ -1,63 +1,58 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html><head><title>Create Table</title></head><body>
 
 <?php
+    $server = 'localhost';
 
-$server = 'localhost';
+    $user = 'root';
 
-$user = 'root';
+    $pass = '';
 
-$pass = '';
+    $mydb = 'mydatabase';
 
-$mydb = 'mydatabase';
+    $table_name = 'Products';
 
-$table_name = 'Products';
+    $connect = mysqli_connect($server, $user, $pass);
 
-$connect = mysqli_connect($server, $user, $pass);
+    if (!$connect) {
 
-if (!$connect) {
+        die ("Cannot connect to $server using $user");
 
-die ("Cannot connect to $server using $user");
+    } else {
 
-} else {
+        $SQLcmd = "CREATE TABLE $table_name(
 
-$SQLcmd = "CREATE TABLE $table_name(
+                    ProductID INT UNSIGNED NOT NULL
 
-ProductID INT UNSIGNED NOT NULL
+                    AUTO_INCREMENT PRIMARY KEY,
 
-AUTO_INCREMENT PRIMARY KEY,
+                    Product_desc VARCHAR(50),
 
-Product_desc VARCHAR(50),
+                    Cost INT,
 
-Cost INT,
+                    Weight INT,
 
-Weight INT,.
+                    Numb INT)";
 
-Numb INT)";
+    mysqli_select_db($connect, $mydb);
 
-mysqli_select_db($connect, $mydb);
+    if (mysqli_query( $connect, $SQLcmd )){
 
-if (mysqli_query( $connect, $SQLcmd )){
+        print '<font size="4" color="blue" >Created Table';
 
-print '<font size="4" color="blue" >Created Table';
+        print "<i> $table_name</i> in database<i> $mydb </i><br></font>";
 
-print "<i>$table_name</i> in database<i>$mydb</i><br></font>";
+        print "<br>SQLcmd = $SQLcmd";
 
-print "<br>SQLcmd=$SQLcmd";
+    } else {
 
-} else {
+        die ("Table Create Creation Failed SQLcmd = $SQLcmd");
 
-die ("Table Create Creation Failed SQLcmd=$SQLcmd");
+    }
+
+    mysqli_close($connect);
 
 }
 
-mysqli_close($connect);
-
- }
-
-  ?></body></html>
+?>
+</body></html>
