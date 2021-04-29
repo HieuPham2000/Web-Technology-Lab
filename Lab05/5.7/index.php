@@ -24,7 +24,22 @@
                                 $password = "";
                                 $dbname = "business_service";
                                 
-                                $url = "http://localhost/Web-Lab05/index.php";
+                                if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+                                    $url = "https://";   
+                                else  
+                                    $url = "http://";   
+                                // Append the host(domain name, ip) to the URL.   
+                                $url.= $_SERVER['HTTP_HOST'];   
+
+                                // Append the requested resource location to the URL   
+                                // $url.= $_SERVER['REQUEST_URI'];    
+                                
+                                $current_url = explode("?", $_SERVER['REQUEST_URI']);
+                                // echo $current_url[0] ;
+                                
+                                $url.= $current_url[0];
+
+                                // echo $url;  
 
                                 // Create connection
                                 $conn = mysqli_connect($servername, $username, $password, $dbname);
