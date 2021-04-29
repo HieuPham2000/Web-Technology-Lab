@@ -26,9 +26,9 @@
                   // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
                         $des = $row['Product_desc'];
-                        echo '<label for=' . $des . '>' . $des . '</label>';
-                        echo '<input type="radio" value="' . $des . '" name="Product">';
-
+                        // echo '<label for=' . $des . '>' . $des . '</label>';
+                        // echo '<input type="radio" value="' . $des . '" name="Product" required checked>';
+                        echo '<label for=' . $des . '><input type="radio" value="' . $des . '" name="Product" required checked>' . $des . '</label><br>';
                     }
 
                 }
@@ -61,7 +61,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT ProductID, Product_desc, Weight, Cost, Numb FROM products";
+$sql = "SELECT * FROM Products";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -73,8 +73,8 @@ if (mysqli_num_rows($result) > 0) {
     echo "<tr>"
             . "<td style='border: 1px solid black;'>Num</td>"
             . "<td style='border: 1px solid black;'>Product</td>"
-            . "<td style='border: 1px solid black;'>Weight</td>"
             . "<td style='border: 1px solid black;'>Cost</td>"
+            . "<td style='border: 1px solid black;'>Weight</td>"
             . "<td style='border: 1px solid black;'>Count</td>"
         . "</tr>";
     while($row = mysqli_fetch_assoc($result)) {
@@ -82,8 +82,8 @@ if (mysqli_num_rows($result) > 0) {
         echo 
                 "<td style='border: 1px solid black;'>" . $row["ProductID"]. "</td>".
                 "<td style='border: 1px solid black;'>" . $row["Product_desc"]. "</td>".
-                "<td style='border: 1px solid black;'>" . $row["Weight"]. "</td>".
                 "<td style='border: 1px solid black;'>" . $row["Cost"]. "</td>".
+                "<td style='border: 1px solid black;'>" . $row["Weight"]. "</td>".
                 "<td style='border: 1px solid black;'>" . $row["Numb"]. "</td>";
         echo "</tr>";
         

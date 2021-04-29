@@ -46,19 +46,20 @@
 <html>
     <head>
         <title>Business Registration</title>
+        <link type="text/css" rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <font size='6' color='blue'>Business Registration</font>
+        <h1>Business Registration</h1>
         <br>
         <br>
-        <form method='POST' style="">
-            <div style="display: flex; flex-direction: row; ">
-                <div style='padding-right: 20; display: flex; flex-direction: column; width: 200px'>
+        <form method='POST'>
+            <div class="container">
+                <div class="left">
                     <?php 
                         if(!isset($_POST["submit"]) ){
-                            echo "<font> Click on one or ctrl-click on mutiple categories</font>";
+                            echo "<label>Click on one or ctrl-click on mutiple categories:</label>";
                         } else {
-                            echo "<font> Selected category values are highlighted</font>";
+                            echo "<label>Selected category values are highlighted:</label>";
                         }
                     ?>
                         <!--<font> Click on one or ctrl-click on mutiple categories</font>-->
@@ -99,6 +100,7 @@
                             ?>
                         </select>
                 </div>
+                <div class="right">
                 <table>
                     <?php 
 
@@ -117,13 +119,14 @@
                     </tr>
                     <tr>
                         <td><label>Telephone:</label></td>
-                        <td><input type='text' name='tel' value='<?php echo $tel?>' required></td>
+                        <td><input type="tel" name='tel' value='<?php echo $tel?>' required></td>
                     </tr>
                     <tr>
                         <td><label>URL:</label></td>
-                        <td><input type='text' name='url' value='<?php echo $url ?>' required></td>
+                        <td><input type="url" name='url' value='<?php echo $url ?>' required></td>
                     </tr>
                 </table>
+                </div>
             </div>
             <?php 
                 if(!isset($_POST['submit'])){

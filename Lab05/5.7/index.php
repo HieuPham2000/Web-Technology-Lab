@@ -1,18 +1,11 @@
 <html>
     <head>
         <title>Business Listings</title>
-        <style>
-            table,tr,td {
-                border: 1px solid black;
-            }
-            
-            .container{
-            }
-        </style>
+        <link type="text/css" rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class='container'>
-            <font size='6' color='blue'>Business Listings</font>
+            <h1>Business Listings</h1>
             <br><br>
             <div style="display: flex; flex-direction: row; ">
                 <div style='padding-right: 20; display: flex; flex-direction: column; width: 200px'>
@@ -57,8 +50,8 @@
                                         
                                         while($row = mysqli_fetch_assoc($result)) {
     
-                                            echo "<tr><td><a href='" . $url . '?catID='. $row['CategoryID'] . "'>" . $row['Title'] . "</a></td></tr>" ;
-                                            
+                                            echo "<tr><td class='link-category'><a href='" . $url . '?catID='. $row['CategoryID'] . "'>" . $row['Title'] . "</a></td></tr>" ;
+//                                            echo "<tr><td class='link' data-href=" . $url . '?catID='. $row['CategoryID'].">" . $row['Title'] . "</a></td></tr>" ;
                                         }
                                     
 
@@ -120,5 +113,13 @@
                 </table>
             </div>            
         </div>
+<!--        <script>
+            function clickLink() {
+                window.location.href = this.data['href'];
+            }
+            
+            var x = document.getElementsByClass('link');
+            x.addEventListener('click', clickLink);
+        </script>-->
     </body>
 </html>
