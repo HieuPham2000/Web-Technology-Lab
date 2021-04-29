@@ -1,0 +1,101 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 29, 2021, 10:30:51 AM
+    Author     : Hieu Pham
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 29, 2021, 10:03:58 AM
+    Author     : Hieu Pham
+*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: dodgerblue;
+}
+
+label {
+    color: dodgerblue; 
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.left, .right {
+    margin: 20px;
+}
+
+select {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+option {
+    padding: 5px 10px;
+}
+
+td {
+    padding: 5px 10px;
+}
+input[type="text"], input[type="tel"], input[type="url"]  {
+    width: 100%;
+}
+input[type="submit"] {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 50%;
+    
+    border: none;
+    border-radius: 2px;
+    
+    background-color: green;
+    color: white;
+    
+    transition: 0.3s ease-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #006600;
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    color: #6600ff;
+    transition: 0.2s ease-out;
+}
+
+a:hover {
+    color: #6699ff;
+}
+
