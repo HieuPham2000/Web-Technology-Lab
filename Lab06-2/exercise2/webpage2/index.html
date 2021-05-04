@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webpage 2 - IT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  </head>
+  <body>
+    <div id="header">
+      <div>
+        <img id="header-icon" src="images/computer-science-icon.png">
+        <p id="header-name">Share IT</p>
+      </div>
+      <ul id="navbar">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Bài viết</a></li>
+        <li><a href="#">Thảo luận</a></li>
+      </ul>
+    </div>
+    <div id="sidebar">
+      <p id="title-sidebar">Danh mục nội dung</p>
+      <ul>
+        <li class="list-content-level-1"><a href="#_1-array-0">1. Array</a></li>
+        <li class="list-content-level-2"><a href="#_cac-phep-toan-tren-mang-1">Các phép toán trên mảng</a></li>
+        <li class="list-content-level-2"><a href="#_ung-dung-cua-mang-2">Ứng dụng của mảng</a></li>
+
+        <li class="list-content-level-1"><a href="#_2-linkedlist-3">2. Linked List</a></li>
+        <li class="list-content-level-2"><a href="#_cac-phep-toan-tren-linked-list-4">Các phép toán trên linked list</a></li>
+        <li class="list-content-level-2"><a href="#_ung-dung-cua-linked-list-5">Ứng dụng của linked list</a></li>
+
+        <li class="list-content-level-1"><a href="#_3-stack-6">3. Stack</a></li>
+        <li class="list-content-level-2"><a href="#_hoat-dong-cua-stack-7">Hoạt động của stack</a></li>
+        <li class="list-content-level-2"><a href="#_ung-dung-cua-stack-8">Ứng dụng của stack</a></li>
+
+        <li class="list-content-level-1"><a href="#_4-queue-9">4. Queue</a></li>
+        <li class="list-content-level-2"><a href="#_hoat-dong-cua-queue-10">Hoạt động của queue</a></li>
+        <li class="list-content-level-2"><a href="#_ung-dung-cua-queue-11">Ứng dụng của queue</a></li>
+
+        <li class="list-content-level-1"><a href="#_5-hash-table-12">5. Hash table</a></li>
+        <li class="list-content-level-2"><a href="#_hash-function-13">Hash function</a></li>
+        <li class="list-content-level-2"><a href="#_ung-dung-cua-hash-table-14">Ứng dụng của hash table</a></li>
+
+        <li class="list-content-level-1"><a href="#_6-tree-15">6. Tree</a></li>
+        <li class="list-content-level-2"><a href="#_binary-search-tree-16">Binary Search Tree</a></li>
+        <li class="list-content-level-2"><a href="#_ung-dung-cua-tree-17">Ứng dụng của tree</a></li>
+
+        <li class="list-content-level-1"><a href="#_7-heaps-18">7. Heap</a></li>
+        <li class="list-content-level-2"><a href="#_ung-dung-cua-heap-19">Ứng dụng của heap</a></li>
+
+        <li class="list-content-level-1"><a href="#_8-graph-20">8. Graph</a></li>
+        <li class="list-content-level-2"><a href="#_do-thi-co-huong-21">Đồ thị có hướng</a></li>
+        <li class="list-content-level-2"><a href="#_do-thi-vo-huong-22">Đồ thị vô hướng</a></li>
+
+        <li class="list-content-level-1"><a href="#_tong-ket">Tổng kết</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <h1>8 kiểu cấu trúc dữ liệu mà mọi lập trình viên cần phải biết</h1>
+
+      <div>
+      <p>Trong lĩnh vực Khoa học máy tính, <strong>cấu trúc dữ liệu</strong> được định nghĩa là những cách để tổ chức và lưu trữ dữ liệu trong máy tính để chúng ta có thể thực hiện các hoạt động trên dữ liệu được lưu trữ đó một cách hiệu quả hơn. Cấu trúc dữ liệu có một phạm vi sử dụng rộng rãi trên các lĩnh vực khác nhau của ngành Khoa học máy tính lẫn Kỹ thuật Phần mềm.</p>
+      <img src="images/datastructures.png" alt="data structures">
+      <p>Các cấu trúc dữ liệu được sử dụng trong hầu hết mọi chương trình hay phần mềm đã được phát triển. Hơn nữa, các cấu trúc dữ liệu đều tuân theo các nguyên tắc cơ bản của Khoa học máy tính và Kỹ thuật Phần mềm. Nó cũng là một chủ để quan trọng trong các câu hỏi phỏng vấn ở ngành Kỹ thuật phẩn mềm. Do đó, là một lập trình viên, chúng ta cần phải có kiến thức tốt về các cấu trúc dữ liệu. Trong bài viết này, mình sẽ giải thích ngắn gọn về 8 cấu trúc dữ liệu thường gặp mà theo mình nghĩ là mọi lập trình viên cần phải biết về chúng.</p>
+    </div>
+    <div class="item">
+      <h2 id="_1-array-0" class="content-title">1. Array</h2>
+      <p>Một Array - mảng là một cấu trúc với kích thước cố định, có thể giữ các item có dùng kiểu dữ liệu. Nó có thể là một mảng các số nguyên, một mảng các số thực, một mảng string hay kể cả một mảng của các mảng (mảng 2 chiều). Mảng được đánh chỉ mục, cho phép ta có thể truy cập ngẫu nhiên vào mảng.</p>
+      <img src="images/array.png" alt="example of an array">
+      <h3 id="_cac-phep-toan-tren-mang-1">Các phép toán trên mảng</h3>
+      <ul>
+        <li>Truy cập ngẫu nhiên: Cho phép ta truy cập tới một phần tử bất kỳ trong mảng bằng chỉ mục (index) của nó.</li>
+        <li>Tìm kiếm: Tìm kiếm một phần tử trong mảng bằng chỉ mục hoặc giá trị của nó.</li>
+        <li>Cập nhật: Cập nhật giá trị của một phần tử đã tồn tại trong mảng thông qua chỉ mục của nó. Việc chèn thêm phần tử hay xoá bớt phần tử trên mảng là không thể thực hiện thẳng bởi mảng có kích thước cố định. Nếu muốn thêm một phần tử vào mảng, đầu tiên ta phải tạo một mảng mới với kích thước được tăng lên so với mảng cũ, sau đó copy các phần từ và thêm phần tử mới vào mảng mới. Tương tự với việc xoá phần tự, ta cần một mảng mới với kích thước nhỏ hơn.</li>
+      </ul>
+      <h3 id="_ung-dung-cua-mang-2">Ứng dụng của mảng</h3>
+      <ul>
+        <li>Sử dụng để xây dựng nên các cấu trúc dữ liệu khác như là array list, heap, hash table, vector hay matrix.</li>
+        <li>Sử dụng cho các thuật toán sắp xếp khác nhau như là insertion sort, quick sort, buble sort, merge sort.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <h2 id="_2-linked-list-3">2. Linked List</h2>
+      <p>Một Linked list là một cấu trúc tuần tự bao gồm một chuỗi các item theo thứ tự tuyến tính được liên kết với nhau. Do đó, ta chỉ có thể truy cập tuần tự vào linked list, không thể thực hiện truy cập ngẫu nhiên. Linked list là cung cấp cho chúng ta một cấu trúc dữ liệu đơn giản và linh hoạt cho các tập hơn động. Hãy cùng xem xét các quy tắc của một linked list. Để hiểu rõ hơn về ý tưởng của linked list, bạn có thể xem thêm hình dưới:</p>
+      <img src="images/linkedlist.png" alt="example of a linkedlist">
+      <ul>
+        <li>Các phần tử trong linked list được gọi là các <strong>node</strong>.</li>
+        <li>Mỗi node sẽ chứa một <strong>key</strong> và một con trỏ trỏ tới node kế tiếp của nó, được gọi là <strong>next</strong>.</li>
+        <li>Thuộc tính tên là <strong>head</strong> trỏ tới phần tử đầu tiên của linked list.</li>
+        <li>Phần tử cuối cùng của linked list có tên là <strong>tail</strong>.</li>
+      </ul>
+      <p>Một số loại linked list có thể kể tới bao gồm:</p>
+      <ul>
+        <li>Singly linked list: Duyệt qua các phẩn tử chỉ có thể thực hiện theo chiều hướng về phía trước.</li>
+        <li>Doubly linked list: Duyệt qua các phẩn tử có thể thực hiện theo cả chiều tiến và lùi. Các node sẽ bao gồm thêm một con trỏ được gọi là <strong>pre</strong>, trỏ tới node trước đó.</li>
+        <li>Circular linked list: Là một doubly linked list đặc biệt, khi mà con trỏ prev của head trỏ tới tail và con trỏ next của tail trỏ tới head.</li>
+      </ul>
+      <h3 id="_cac-phep-toan-tren-linkedlist-4">Các phép toán trên linked list</h3>
+      <ul>
+        <li>Tìm kiếm: Tìm phần tử đầu tiên với key là <strong>k</strong> trong một linked list được cho trước được thực hiện đơn giản bằng một quá trình duyệt tuần tự và trả về con trỏ trỏ tới phần tử đó.</li>
+        <li>Thêm: Để thêm một key vào một linked list có sẵn, ta có thể thực hiện theo 3 cách: thêm vào đầu list, thêm vào giữa list hoặc thêm vào cuối của list.</li>
+        <li>Xoá: Xoá một phần tử <strong>x</strong> khỏi một linked list cho trước. Ta không thể xoá một node với chỉ một bước. Việc xoá một node có thể thực hiện theo 3 cách: xoá từ đầu danh sách, xoá từ giữa danh sách hoặc xoá từ cuối danh sách.</li>
+      </ul>
+      <h3 id="_ung-dung-cua-linkedlist-5">Ứng dụng của linked list</h3>
+      <ul>
+        <li>Được dùng cho <em>symbol table management</em> trong thiết kế compiler.</li>
+        <li>Được sử dụng trong việc chuyển giữa các chương trình bằng phím tắt Alt + Tab (cài đặt bằng Circular Linked List).</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h2 id="_3-stack-6">3. Stack</h2>
+      <p>Stack - ngăn xếp là một cấu trúc dạng LIFO (Last In First Out - phần tử được đưa vào sau cùng sẽ có thể được truy cập đầu tiên) được thấy thường xuyên trong rất nhiều ngôn ngữ lập trình. Cấu trúc này được đặt tên là "stack" bởi vì nó giống với hình ảnh một "stack" trong thực tế - một "stack" bát đĩa.</p>
+      <img src="images/stack1.jpeg" alt="stack in reality">
+      <h3 id="_hoat-dong-cua-stack-7">Hoạt động của stack</h3>
+      <p>Có 2 hoạt động cơ bản có thể được thực hiện trên một stack, mô tả ở hình phía dưới đây:</p>
+      <ul>
+        <li>Push: Thêm một phần tử vào đỉnh của stack</li>
+        <li>Pop: Xoá một phần tử khỏi top của stack</li>
+      </ul>
+      <img src="images/stack2.png" alt="example of a stack">
+      <p>Ngoài ra, còn có một số hàm khác được bổ sung vào stack để kiểm tra trạng thái của nó, gồm có:</p>
+      <ul>
+        <li>Peek: Trả về phần tử ở đỉnh của stack mà không xoá nó đi</li>
+        <li>isEmpty: Kiểm tra một stack có rỗng không</li>
+        <li>isFull: Kiểm tra một stack có đang đầy không</li>
+      </ul>
+      <h3 id="_ung-dung-cua-stack-8">Ứng dụng của stack</h3>
+      <ul>
+        <li>Sử dụng cho tính toán giá trị biểu thức</li>
+        <li>Sử dụng cho cài đặt lời gọi hàm trong lập trình đệ quy</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h2 id="_4-queue-9">4. Queue</h2>
+      <p>Queue - hàng đợi là một cấu trúc dạng FIFO (First In First Out - phần tử được đặt ở đầu sẽ có thể được truy cập đầu tiên) được thấy thường xuyên trong rất nhiều ngôn ngữ lập trình. Cấu trúc dữ liệu này được đặt tên là "queue" bởi nó giống với hình ảnh một hàng đợi trong thực tế - một hàng người xếp hàng đợi.</p>
+      <img src="images/queue1.jpeg" alt="queue in reality">
+      <h3 id="_hoat-dong-cua-queue-10">Hoạt động của queue</h3>
+      <p>Có 2 hoạt động cơ bản có thể được thực hiện trên một queue, mô tả ở hình phía dưới đây:</p>
+      <ul>
+        <li>Enqueue: Thêm một phần tử vào phía cuối queue</li>
+        <li>Dequeue: Xoá một phần tử ở phía đầu queue</li>
+      </ul>
+      <img src="images/queue2.png" alt="example of a queue">
+      <h3 id="_ung-dung-cua-queue-11">Ứng dụng của queue</h3>
+      <ul>
+        <li>Được sử dụng để quản lý thread trong multithreading</li>
+        <li>Được sử dụng để cài đặt các hệ thống hàng đợi</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h2 id="_5-hash-table-12">5. Hash table</h2>
+      <p>Hash table - bảng băm là một cấu trúc dữ liệu lưu trữ các giá trị mà mỗi giá trị có một key được liên kết với nó. Hơn nữa, hash table hỗ trợ tìm kiếm hiệu quả nếu ta biết được key của giá trị cần tìm. Do đó, nó rất hiệu quả trong việc thêm, tìm kiếm dữ liệu bất kể kích thước dữ liệu như thế nào. Phương pháp đánh địa chỉ trực tiếp sử dụng ánh xạ 1 - 1 giữa key và value khi lưu trữ trong bảng. Tuy nhiên, có một vấn đề trong cách tiếp cận này là khi có một lượng lớn cặp key-value cần lưu trữ. Table sẽ trở nên rất lớn với nhiều bản ghi và sẽ gặp vấn đề khi lưu trữ. Do đó, để tránh vấn đề này, ta sẽ sử dụng hash table</p>
+      <h3 id="_hash-function-13">Hash function</h3>
+      <p>Một hàm đặc biệt có tên gọi là <strong>hash function (h)</strong> được sử dụng để giải quyết vấn đề của cách tiếp cận đánh địa chỉ trực tiếp. Với cách truy cập trực tiếp, một giá trị với key <strong>k</strong> sẽ được lưu trữ trong slot <strong>k</strong>. Sử dụng hàm băm, chúng ta sẽ tính toán index của slot mà value được lưu trữ. Giá trị được tính toán bằng hàm băm của một key được gọi là <strong>hash value</strong>, cho biết index của slot mà giá trị được ánh xạ tới.</p>
+      <blockquote>
+        <p>h(k) = k % m</p>
+      </blockquote>
+      <ul>
+        <li><strong>h</strong>: hàm băm</li>
+        <li><strong>k</strong>: key của hash value cần xác định</li>
+        <li><strong>m</strong> size của hash table</li>
+      </ul>
+      <img src="images/hashtable.png" alt="example of a hashtable">
+      <h3 id="_ung-dung-cua-hash-table-14">Ứng dụng của hash tables</h3>
+      <ul>
+        <li>Sử dụng để cài đặt việc đánh index trong database</li>
+        <li>Sử dụng để cài đặt các mảng liên kết</li>
+        <li>Sử dụng để cài đặt kiểu cấu trúc dữ liệu <strong>Set</strong></li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h2 id="_6-tree-15">6. Tree</h2>
+      <p>Tree - cây là một cấu trúc dữ liệu có phân cấp, trong đó dữ liệu được tổ chức theo thứ bậc và được liên kết với nhau khi lưu trữ. Có nhiều kiểu tree đã được phát triển trong nhiều thập kỷ qua, để phù hợp với các ứng dụng khác nhau hay khắc phục những hạn chế nhất định. Một số ví dụ có thể kể tới bao gồm: cây tìm kiếm nhị phân, B-tree, treap, red-black tree, splay tree, ...</p>
+      <h3 id="_binary-search-tree-16">Binary Search Tree</h3>
+      <p>Một binary search tree (BST) - cây tìm kiếm nhị phân, như tên nó đã gợi ý, là một cấu trúc dữ liệu lưu trữ dữ liệu theo dạng cấu trúc thứ bậc. Cấu trúc dữ liệu này lưu trữ giá trị theo thứ tự sắp xếp. Mỗi node trong một BST bao gồm các thuộc tính sau:</p>
+      <ul>
+        <li><strong>key</strong>: giá trị được lưu trữ trong node</li>
+        <li><strong>left</strong>: con trỏ tới con bên trái</li>
+        <li><strong>right</strong>: con trỏ tới con bên phải</li>
+        <li><strong>p</strong>: con trỏ tới node cha</li>
+      </ul>
+      <p>Hãy xét một node x trong cây tìm kiếm nhị phân:</p>
+      <img src="images/bst.png" alt="example of BST">
+      <ul>
+        <li>Nếu y là node con bên trái của x, thì <strong>y.key &le; x.key</strong></li>
+        <li>Nếu y là node con bên phải của x, thì <strong>y.key &ge; x.key</strong></li>
+      </ul>
+      <h3 id="_ung-dung-cua-tree-17">Ứng dụng của tree</h3>
+      <ul>
+        <li><strong>Binary Trees</strong>: Sử dụng để cài đặt parse và tính toán biểu thức.</li>
+        <li><strong>Binary Search Tree</strong>: Được sử dụng trong rất nhiều ứng dụng tìm kiếm, nơi mà dữ liệu vào ra liên tục.</li>
+        <li><strong>Heaps</strong>: Được sử dụng trong JVM để lưu trữ các đối tượng.</li>
+        <li><strong>Treaps</strong>: Sử dụng trong mạng không dây.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h2 id="_7-heap-18">7. Heap</h2>
+      <p>Heap là một trường hợp đặc biệt của cây nhị phân, khi mà node cha sẽ so sánh giá trị của nó với các node con của nó để sắp xếp lại cho phù hợp. Ta hãy cũng xem xét cách biểu diễn heap. Heap có thể được biểu diễn bằng cách sử dụng tree hoặc array. Hai hình vẽ dưới dây cho ta cách biểu diễn một hear bằng cách sử dụng cây nhị phân hoặc mảng.</p>
+      <img src="images/heap1.png" alt="implement heap using binary tree">
+      <img src="images/heap2.png" alt="implement heap using array">
+      <p>Có 2 kiểu heap:</p>
+      <ul>
+        <li><strong>Min Heap</strong> - giá trị của node cha sẽ nhỏ hơn hoặc bằng các con của nó. Node ở root sẽ có giá trị nhỏ nhất trong heap.</li>
+        <li><strong>Max Heap</strong> - giá trị của node cha sẽ lớn hơn hoặc bằng các con của nó. Node ở root sẽ có giá trị lớn nhất trong heap.</li>
+      </ul>
+      <h3 id="_ung-dung-cua-heap-19">Ứng dụng của heap</h3>
+      <ul>
+        <li>Sử dụng trong thuật toán heapsort.</li>
+        <li>Sử dụng để triển khai hàng đợi ưu tiên.</li>
+        <li>Các queue function có thể được cài đặt bằng cách sử dụng heap với độ phức tạp là O(log n).</li>
+        <li>Sử dụng để tìm giá trị lớn (nhỏ) thứ k trong một mảng cho trước.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h2 id="_8-graph-20">8. Graph</h2>
+      <p>Một graph - đồ thị là một tập hợp hữu hạn các đỉnh (nút) và đường đi giữa các đỉnh này. Kích thước của một đồ thị được tính bằng số lượng, bậc của đồ thị được tính bằng số đỉnh của nó. Hai đỉnh được gọi là liền kề nếu chúng được nối với nhau bởi cùng một đường.</p>
+      <h3 id="_do-thi-co-huong-21">Đồ thị có hướng</h3>
+      <p>Một đồ thị gọi là đồ thị có hướng nếu tất cả đường đi trên nó đều được đánh dấu chiều giữa điểm đầu và điểm cuối. Ký hiệu <strong>(u,v)</strong> là đường đi từ đỉnh u tới đỉnh v. <strong>Self-loop</strong>: việc một đỉnh có đường đi tới chính nó.</p>
+      <h3 id="_do-thi-vo-huong-22">Đồ thị vô hướng</h3>
+      <p>Một đồ thị gọi là đồ thị vô hướng nếu tất cả đường đi trên nó đều không quy định chiều. Nếu một đỉnh trong đồ thị không được kết nối tới bất kỳ đỉnh nào, ta nói nó bị cô lập.</p>
+      <img src="images/graph.png" alt="example of graphs">
+      <h3 id="_ung-dung-cua-do-thi-23">Ứng dụng của đồ thị</h3>
+      <ul>
+        <li>Sử dụng để biểu diễn mạng xã hội. Mỗi người dùng là một định và người dùng sẽ được kết nối với nhau bởi các cạnh.</li>
+        <li>Sử dụng để biểu diễ các trang web và link trong các công cụ tìm kiếm. Trang web trên mạng internet sẽ được liên kết tới các trang khác qua các đường link. Mỗi trang web là một đỉnh và các link sẽ là các cạnh.</li>
+        <li>Sử dụng để biểu diễn vị trí và đường đi trong GPS. Vị tí là các đỉnh và đường đi giữa các vị trí chính là các cạnh. Được sử dụng để tính toán đường đi ngắn nhất giữa 2 địa điểm.</li>
+      </ul>
+    </div>
+    <div>
+      <h2 id="_tong-ket-24">Tổng kết</h2>
+      <p>Trên đây là 8 kiểu cấu trúc dữ liệu cơ bản mà mỗi lập trình viên cần và nên biết.</p>
+      <p>Nguồn: <a href="https://viblo.asia/p/8-kieu-cau-truc-du-lieu-ma-moi-lap-trinh-vien-can-phai-biet-yMnKMmdEK7P">8 kiểu cấu trúc dữ liệu mà mọi lập trình viên cần phải biết</a></p>
+    </div>
+      
+    </div>
+    
+    <div id="footer">HieuPham2000 - 5/2021</div>
+    <a id="gotohead" href="#header">
+      <img src="images/arrow-up.png">
+    </a>
+  </body>
+</html>
+
