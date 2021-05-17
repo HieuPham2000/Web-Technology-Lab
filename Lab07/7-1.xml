@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+  <name>Nguyen Van A</name>
+  <gender>Male</gender>
+  <address>
+    <district>Dong Anh</district>
+    <city>Hanoi</city>
+  </address>
+  <school type="university">
+    <school-name>Hanoi University of Science and Technology</school-name>
+  </school>
+</student>
