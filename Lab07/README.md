@@ -48,7 +48,7 @@ Xem file ```7-1.xml```
 
 ## II. Exercise
 
-### 7.5. HTML, XHTML & XML
+### 7.5. Exercise 1: HTML, XHTML & XML
 
 #### 7.5.1.	HTML 4.01 Strict 
 
@@ -106,7 +106,14 @@ Kết quả:
 </div>
 
 #### 7.5.5.	XML Application
+  
+Xem file ```7-5-5.docx```
 
+  
+### 7.6.	Exercise 2: XML Programming  
+  
+Xem code trong folder ```7-6```
+  
 ---
 
 ### III. Tài liệu tham khảo
